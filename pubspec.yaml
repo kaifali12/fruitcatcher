@@ -1,0 +1,35 @@
+name: fruit_catcher
+description: A fun arcade game where you catch falling fruits and avoid bombs.
+publish_to: 'none'
+version: 1.1.0+2
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+  flutter: '>=3.10.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.6
+  shared_preferences: ^2.2.2
+  audioplayers: ^6.0.0
+  google_mobile_ads: ^9.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+  change_app_package_name: ^1.5.0
+  flutter_launcher_icons: ^0.14.4
+
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/icon/app_icon.png"
+  min_sdk_android: 21
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/sounds/

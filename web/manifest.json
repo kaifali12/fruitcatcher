@@ -1,0 +1,23 @@
+{
+  "name": "Fruit Catcher",
+  "short_name": "FruitCatcher",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#0F1226",
+  "theme_color": "#FF6B6B",
+  "description": "A Flutter arcade game — catch falling fruits, avoid bombs.",
+  "orientation": "portrait-primary",
+  "prefer_related_applications": false,
+  "icons": [
+    {
+      "src": "icons/Icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/Icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

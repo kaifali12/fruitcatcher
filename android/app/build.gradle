@@ -1,0 +1,50 @@
+plugins {
+    id("com.android.application")
+    id("dev.flutter.flutter-gradle-plugin")
+}
+
+android {
+    namespace = "com.play.fruitcatcher"
+    compileSdk = 35
+    ndkVersion = flutter.ndkVersion
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+
+    kotlinOptions {
+        jvmTarget = "17"
+    }
+
+    defaultConfig {
+        applicationId = "com.play.fruitcatcher"
+
+        minSdkVersion = flutter.minSdkVersion
+        targetSdk = 35
+
+        versionCode = 1
+        versionName = "1.1.0"
+    }
+
+    // 🔥 ADD THIS → KEYSTORE CONFIG
+    signingConfigs {
+        create("release") {
+            storeFile = file("upload-keystore.jks")
+            storePassword = "fruit123"
+            keyAlias = "upload"
+            keyPassword = "fruit123"
+        }
+    }
+
+    buildTypes {
+        release {
+            // 🔥 USE RELEASE KEYSTORE
+            signingConfig = signingConfigs.getByName("release")
+        }
+    }
+}
+
+flutter {
+    source = "../.."
+}
